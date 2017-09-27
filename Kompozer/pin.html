@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>pincode</title>
+
+<script>
+function validateform()
+{
+var x=document.js2.name.value;
+var y=document.js2.pin.value;
+if(x==""||x==null)
+{
+alert("Please enter your name:");
+document.js2.name.focus();
+return false;
+}
+if (y==null||isNaN(y)||y.length>6||y.length<6)
+{
+alert("Please enter your pincode properly:");
+document.js2.pin.focus();
+return false;
+}
+}
+</script>
+</head><body>
+<form onsubmit="return validateform()" method="post" action="pin.html" name="js2">Name:&nbsp;<input name="name"><br>
+Pincode : <input name="pin"><br>
+<input name="Submit" value="SUBMIT" type="submit"></form>
+</body></html>

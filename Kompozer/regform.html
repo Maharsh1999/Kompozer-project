@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Registration form</title>
+
+</head>
+<body>
+<script>
+function validateform()
+{
+var x=document.js1.name.value;
+var y=document.js1.add.value;
+if(x==""||x==null)
+{
+alert("Please enter your name:");
+document.js1.name.focus();
+return false;
+}
+if(y=="")
+{
+alert("Please enter your address:");
+document.js1.add.focus();
+return false;
+}
+if((document.js1.gender[0].checked==false)&&(document.js1.gender[1].checked==false))
+{
+alert("Please select your gender.");
+document.js1.gender[0].focus();
+return false;
+}
+if((document.js1.hobby[0].checked==false)&&(document.js1.hobby[1].checked==false)&&(document.js1.hobby[2].checked==false))
+{
+alert("Please select your hobby");
+document.js1.hobby[0].focus();
+return false;
+}
+if(document.js1.city.value=="-1")
+{
+alert("Please select your city");
+document.js1.city.focus();
+return false;
+}
+}
+</script>
+<form onsubmit="return validateform()" method="post" action="reg.html" name="js1">Name :&nbsp;<input name="name"><br>
+<br>
+Gender : <input name="gender" value="Male" type="radio">Male &nbsp;<input name="gender" value="Female" type="radio">Female<br>
+<br>
+Hobby : <input name="hobby" value="Dance" type="checkbox">Dance &nbsp;<input name="hobby" value="Sing" type="checkbox">Sing &nbsp;<input name="hobby" value="Draw" type="checkbox">Draw<br>
+<br>
+Address : <textarea cols="20" rows="10" name="add"></textarea><br>
+<br>
+City :
+<select name="city"><option value="-1">Select your city</option><option>Vadodara</option><option>Ahmedabad</option><option>Surat</option><option>Rajkot</option><option>Anand</option></select>
+<br>
+<br>
+<input name="submit" value="Submit" type="submit"></form>
+</body></html>
